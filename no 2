@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+// === Definisi Fungsi ===
+
+// Menghitung luas persegi
+float luasPersegi(float sisi) {
+    return sisi * sisi;
+}
+
+// Menghitung luas persegi panjang
+float luasPersegiPanjang(float panjang, float lebar) {
+    return panjang * lebar;
+}
+
+// Menghitung luas lingkaran
+float luasLingkaran(float jariJari) {
+    const float phi = 3.14;
+    return phi * jariJari * jariJari;
+}
+
+// === Fungsi Utama ===
+int main() {
+    cout << "=== FUNCTION SIGNATURES ===" << endl;
+    cout << "1. luasPersegi(float)" << endl;
+    cout << "2. luasPersegiPanjang(float, float)" << endl;
+    cout << "3. luasLingkaran(float)" << endl;
+
+    cout << "\n=== HASIL PERHITUNGAN ===" << endl;
+
+    // Deklarasi variabel
+    float sisi = 5;
+    float panjang = 6;
+    float lebar = 3;
+    float jariJari = 7;
+
+    // Pemanggilan fungsi dan menampilkan hasil
+    cout << "Luas Persegi (sisi = " << sisi << ") = " << luasPersegi(sisi) << endl;
+    cout << "Luas Persegi Panjang (" << panjang << " x " << lebar << ") = "
+         << luasPersegiPanjang(panjang, lebar) << endl;
+    cout << "Luas Lingkaran (r = " << jariJari << ") = " << luasLingkaran(jariJari) << endl;
+
+    return 0;
+}
